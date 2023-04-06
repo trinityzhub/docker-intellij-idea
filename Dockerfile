@@ -4,8 +4,8 @@ FROM ubuntu:18.04
 
 LABEL maintainer "Viktor Adam <rycus86@gmail.com>"
 
-ARG IDEA_VERSION=2023.1-aarch64
-ARG IDEA_BUILD=2023.1
+ARG IDEA_VERSION=2023.1
+ARG IDEA_BUILD=2023.1-aarch64
 
 
 RUN  \
