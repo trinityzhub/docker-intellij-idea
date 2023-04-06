@@ -5,7 +5,7 @@ FROM ubuntu:18.04
 LABEL maintainer "Viktor Adam <rycus86@gmail.com>"
 
 ARG IDEA_VERSION=2023.1
-ARG IDEA_BUILD=2023.1-aarch64
+ARG IDEA_BUILD=2023.1
 
 
 RUN  \
@@ -26,6 +26,7 @@ RUN  \
 
 
 ## https://download.jetbrains.com/idea/ideaIC-2023.1-aarch64.tar.gz
+## https://download.jetbrains.com/idea/ideaIC-2023.1.tar.gz
 ARG idea_source=https://download.jetbrains.com/idea/ideaIC-${IDEA_BUILD}.tar.gz
 ARG idea_local_dir=.IdeaIC${IDEA_VERSION}
 
