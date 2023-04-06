@@ -26,6 +26,9 @@ RUN  \
   && useradd -ms /bin/bash developer
 
 
+RUN echo "cacert=/etc/ssl/certs/ca-certificates.crt" >> ~/.curlrc
+
+
 ## https://download.jetbrains.com/idea/ideaIC-2023.1-aarch64.tar.gz
 ## https://download.jetbrains.com/idea/ideaIC-2023.1.tar.gz
 ARG idea_source=https://download.jetbrains.com/idea/ideaIC-${IDEA_BUILD}.tar.gz
