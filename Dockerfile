@@ -23,7 +23,7 @@ RUN  \
 RUN  apt-get install  gcc git openssh-client less ca-certificates curl -y
 RUN  apt-get install  libxtst-dev libxext-dev libxrender-dev libfreetype6-dev  --yes
 RUN  apt-get install  libfontconfig1 --yes
-RUN  libgtk2.0-0 --assume-yes
+RUN  libgtk2.0-0  --yes
 RUN  libxslt1.1 --yes
 RUN  libxxf86vm1 -y
 RUN rm -rf /var/lib/apt/lists/* \
