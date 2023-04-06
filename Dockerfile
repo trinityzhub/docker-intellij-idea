@@ -22,7 +22,7 @@ RUN  \
   apt-get update && apt-get install --no-install-recommends -y 
 RUN  apt-get install  gcc git openssh-client less ca-certificates curl -y
 RUN  apt-get install  libxtst-dev libxext-dev libxrender-dev libfreetype6-dev -y
-RUN  apt-get install  libfontconfig1 libgtk2.0-0 libxslt1.1 libxxf86vm1 -y
+RUN  apt-get install  libfontconfig1 libgtk2.0-0 libxslt1.1 libxxf86vm1 -y -9
 RUN rm -rf /var/lib/apt/lists/* \
   && useradd -ms /bin/bash developer
 
