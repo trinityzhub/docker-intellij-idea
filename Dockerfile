@@ -1,9 +1,20 @@
-FROM adoptopenjdk/openjdk8
+FROM ubuntu:18.04
+#FROM ubuntu:20.04
+
 
 LABEL maintainer "Viktor Adam <rycus86@gmail.com>"
 
 ARG IDEA_VERSION=2021.1
 ARG IDEA_BUILD=2021.1.3
+
+
+RUN  \
+  apt-get update && apt-get install --no-install-recommends -y
+
+ENV JAVA_HOME=/opt/java/openjdk
+COPY --from=eclipse-temurin:17 $JAVA_HOME $JAVA_HOME
+ENV PATH="${JAVA_HOME}/bin:${PATH}"
+
 
 RUN  \
   apt-get update && apt-get install --no-install-recommends -y \
